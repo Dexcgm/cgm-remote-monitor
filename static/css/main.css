@@ -62,7 +62,7 @@ body {
     margin: 0;
     font-size: 35%;
     text-decoration: line-through;
-    display: block;
+   /* display: block; */
     position: relative;    
     top: -20px;
     
