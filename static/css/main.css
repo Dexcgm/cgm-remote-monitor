@@ -63,7 +63,7 @@ body {
     font-size: 35%;
     text-decoration: line-through;
     display: block;
-    position: relative; 
+ /* position: relative; */    
     top: -20px;
     
 }
@@ -76,7 +76,7 @@ body {
     font-size: 35%;
     text-decoration: none;
     display: block;
-    position: relative; 
+   /*  position: relative; */ 
     top: -20px;
 }
 .currentDirection {
