@@ -406,7 +406,7 @@
                    var bgDeltaString = bgDeltaString + "mmol/L"
                    }
                    else {
-                   var bgDeltaString + "mg/dL"
+                   var bgDeltaString = bgDeltaString + "mg/dL"
                    }
                     $('.container .currentDelta').text(bgDeltaString);
 
