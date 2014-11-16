@@ -62,8 +62,8 @@ body {
     margin: 0;
     font-size: 35%;
     text-decoration: line-through;
-    display: block;
- /* position: relative; */    
+   /* display: block; */
+    position: relative;    
     top: -20px;
     
 }
@@ -75,8 +75,8 @@ body {
     margin: 0;
     font-size: 35%;
     text-decoration: none;
-    display: block;
-   /*  position: relative; */ 
+ /*   display: block; */
+    position: relative; 
     top: -20px;
 }
 .currentDirection {
