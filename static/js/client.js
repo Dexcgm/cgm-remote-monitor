@@ -322,9 +322,8 @@
                     $('.container .currentDelta').text(retroDeltaString);
 
                 $('.container .currentBG').css('text-decoration','line-through');
+                $('.container .currentDirection').html(focusPoint.direction)
                 $('.container .currentDelta').css('text-decoration','line-through');
-                $('.container .currentDirection')
-                    .html(focusPoint.direction)
             } else {
                 $('.container .currentBG')
                     .text("---")
@@ -418,8 +417,8 @@
                     $('.container .currentDelta').text(bgDeltaString);
 
                 $('.container .currentBG').css('text-decoration', '');
-                $('.container .currentDelta').css('text-decoration','');
                 $('.container .currentDirection').html(latestSGV.direction);
+                $('.container .currentDelta').css('text-decoration','');
 
                 var color = sgvToColor(latestSGV.y);
                 $('.container #noButton .currentBG').css({color: color});
