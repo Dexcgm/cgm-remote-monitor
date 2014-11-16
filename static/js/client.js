@@ -41,6 +41,7 @@
         WIDTH_TIME_HIDDEN = 600,
         MINUTES_SINCE_LAST_UPDATE_WARN = 10,
         MINUTES_SINCE_LAST_UPDATE_URGENT = 20;
+        scaleDelta,
 
     // Tick Values
     var tickValues = [40, 60, 80, 120, 180, 300, 400];
@@ -298,7 +299,15 @@
                     $('.container .currentBG').text('HIGH');
                 else
                     $('.container .currentBG').text(focusPoint.sgv);
+                    
+                
                     var retroDelta = scaleBg(focusPoint.y) - scaleBg(prevfocusPoint.y);
+    if (browserSettings.units == "mmol") {
+        retroDelta = retroDelta.tofixed(1);
+    }
+                    
+                    
+                
                     if (retroDelta < 0) {
                         var retroDeltaString = retroDelta;
                     }
