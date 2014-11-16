@@ -131,13 +131,6 @@
             return bg;
         }
     }
-function scaleDelta(bgDelta) {
-        if (browserSettings.units == "mmol") {
-            return (Math.round((bgDelta) * 10) / 10).toFixed(1);
-        } else {
-            return bgDelta;
-        }
-    }
     // initial setup of chart when data is first made available
     function initializeCharts() {
 
@@ -393,7 +386,11 @@ function scaleDelta(bgDelta) {
                     $('.container .currentBG').text('HIGH');
                 else
                     $('.container .currentBG').text(scaleBg(latestSGV.y));
-		        var bgDelta = (scaleBg(latestSGV.y) - scaleBg(prevSGV.y)).tofixed(1);
+		        var bgDelta = scaleBg(latestSGV.y) - scaleBg(prevSGV.y);
+                    if (browserSettings.units == "mmol") {
+                bgDelta = bgDelta.toFixed(1);
+            }
+                    
                     if (bgDelta < 0) {
                         var bgDeltaString = bgDelta;
                     }
