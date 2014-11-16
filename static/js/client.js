@@ -301,7 +301,7 @@
                 
                     var retroDelta = scaleBg(focusPoint.y) - scaleBg(prevfocusPoint.y);
                  if (browserSettings.units == "mmol") {
-                retroDelta = retroDelta.toFixed(1) + 'mmol/L';
+                retroDelta = retroDelta.toFixed(1);
             }
                     if (retroDelta < 0) {
                         var retroDeltaString = retroDelta;
@@ -314,10 +314,10 @@
                     }
                     
                     if (browserSettings.units == "mmol") {
-                   var bgDeltaString = bgDeltaString + " mmol/L"
+                   var retroDeltaString = retroDeltaString + " mmol/L"
                    }
                    else {
-                   var bgDeltaString = bgDeltaString + " mg/dL"
+                   var retroDeltaString = retroDeltaString + " mg/dL"
                    }
                     $('.container .currentDelta').text(retroDeltaString);
 
