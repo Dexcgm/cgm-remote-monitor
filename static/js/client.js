@@ -301,11 +301,6 @@
                     
                 
                     var retroDelta = scaleBg(focusPoint.y) - scaleBg(prevfocusPoint.y);
-    if (browserSettings.units == "mmol") {
-        retroDelta = retroDelta.tofixed(1);
-    }
-                    
-                    
                 
                     if (retroDelta < 0) {
                         var retroDeltaString = retroDelta;
@@ -393,6 +388,10 @@
                 else
                     $('.container .currentBG').text(scaleBg(latestSGV.y));
 		        var bgDelta = scaleBg(latestSGV.y) - scaleBg(prevSGV.y);
+		            if (browserSettings.units == "mmol") {
+         scaleDelta = bgDelta.tofixed(1);
+    }
+    
                     if (bgDelta < 0) {
                         var bgDeltaString = bgDelta;
                     }
@@ -406,8 +405,7 @@
 
                 $('.container .currentBG').css('text-decoration', '');
                 $('.container .currentDelta').css('text-decoration','');
-                $('.container .currentDirection')
-                    .html(latestSGV.direction);
+                $('.container .currentDirection').html(latestSGV.direction);
 
                 var color = sgvToColor(latestSGV.y);
                 $('.container #noButton .currentBG').css({color: color});
