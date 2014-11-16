@@ -44,11 +44,12 @@ body {
     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
     height: 180px;
     vertical-align: middle;
+    clear: both;
 }
 
 .bgStatus {
     float: right;
-    font-size: 900%;
+    font-size: 800%;
     margin-right: 25px;
     text-align: center;
     white-space: nowrap;
@@ -56,8 +57,27 @@ body {
 .bgStatus .currentBG {
     text-decoration: line-through;
 }
+.bgStatus .currentDelta {
+    padding: 0;
+    margin: 0;
+    font-size: 35%;
+    text-decoration: line-through;
+    display: block;
+    position: relative; 
+    top: -20px;
+    
+}
 .bgStatus.current .currentBG {
     text-decoration: none;
+}
+.bgStatus.current .currentDelta {
+  padding: 0;
+    margin: 0;
+    font-size: 35%;
+    text-decoration: none;
+    display: block;
+    position: relative; 
+    top: -20px;
 }
 .currentDirection {
     font-weight: normal;
@@ -203,6 +223,10 @@ div.tooltip {
 
 #testAlarms {
     font-size: 20%;
+}
+
+#currentTime{
+	padding: 0 0 10px 0;
 }
 
 /* Large desktop */
