@@ -300,7 +300,9 @@
                     
                 
                     var retroDelta = scaleBg(focusPoint.y) - scaleBg(prevfocusPoint.y);
-                
+                 if (browserSettings.units == "mmol") {
+                retroDelta = retroDelta.toFixed(1);
+            }
                     if (retroDelta < 0) {
                         var retroDeltaString = retroDelta;
                     }
