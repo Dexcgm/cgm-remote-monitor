@@ -402,6 +402,12 @@
                     else {
                         var bgDeltaString = "+/-0";
                     }
+                   if (browserSettings.units == "mmol") {
+                   var bgDeltaString = bgDeltaString + "mmol/L"
+                   }
+                   else {
+                   var bgDeltaString + "mg/dL"
+                   }
                     $('.container .currentDelta').text(bgDeltaString);
 
                 $('.container .currentBG').css('text-decoration', '');
