@@ -62,7 +62,7 @@ body {
     margin: 0;
     font-size: 35%;
     text-decoration: line-through;
-   /* display: block; */
+    display: block;
     position: relative;    
     top: -20px;
     
@@ -75,13 +75,14 @@ body {
     margin: 0;
     font-size: 35%;
     text-decoration: none;
- /*   display: block; */
+ display: block;
     position: relative; 
     top: -20px;
 }
 .currentDirection {
     font-weight: normal;
     text-decoration: none;
+    display: inline;
 }
 
 .status.toolbarClosed .bgStatus {
