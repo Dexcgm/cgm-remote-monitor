@@ -312,6 +312,13 @@
                     else {
                         var retroDeltaString = "+/-0";
                     }
+                    
+                    if (browserSettings.units == "mmol") {
+                   var bgDeltaString = bgDeltaString + " mmol/L"
+                   }
+                   else {
+                   var bgDeltaString = bgDeltaString + " mg/dL"
+                   }
                     $('.container .currentDelta').text(retroDeltaString);
 
                 $('.container .currentBG').css('text-decoration','line-through');
@@ -403,10 +410,10 @@
                         var bgDeltaString = "+/-0";
                     }
                    if (browserSettings.units == "mmol") {
-                   var bgDeltaString = bgDeltaString + "mmol/L"
+                   var bgDeltaString = bgDeltaString + " mmol/L"
                    }
                    else {
-                   var bgDeltaString = bgDeltaString + "mg/dL"
+                   var bgDeltaString = bgDeltaString + " mg/dL"
                    }
                     $('.container .currentDelta').text(bgDeltaString);
 
